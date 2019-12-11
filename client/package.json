@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "app": "parcel index.html --out-dir dist/"
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "babel-core": "^6.26.3",
+    "babel-plugin-emotion": "^10.0.23",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel": "^1.12.4",
+    "postcss-modules": "^1.4.1",
+    "tailwindcss": "^1.1.4"
+  }
+}

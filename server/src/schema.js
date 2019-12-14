@@ -19,6 +19,12 @@ const typeDefs = gql`
 		votes: Int!
 	}
 
+	type SubReddit {
+		_id: String!
+		name: String!
+		image: String
+	}
+
 	input NewPostInput {
 		title: String!
 		link: String!
@@ -29,6 +35,7 @@ const typeDefs = gql`
 	type Query {
 		user: User!
 		posts: [Post]
+		subreddits: [SubReddit]!
 	}
 
 	type Mutation {

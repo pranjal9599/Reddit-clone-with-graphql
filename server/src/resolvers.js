@@ -1,5 +1,6 @@
 const { getPosts, createPost } = require('./db/posts');
 const { getUser } = require('./db/user');
+const { getSubreddits } = require('./db/subreddits');
 
 module.exports = {
 
@@ -15,7 +16,13 @@ module.exports = {
 		async posts(_, __, { db }) {
 			let allPosts = await getPosts(db);
 			return allPosts;
+		},
+
+		async subreddits(_, __, { db }) {
+			let subreddits = await getSubreddits(db);
+			return subreddits;
 		}
+
 	},
 
 	Mutation: {

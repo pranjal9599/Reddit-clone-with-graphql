@@ -1,5 +1,5 @@
 import React from 'react';
-function PostCard() {
+function PostCard({ title, link, user }) {
     return (
         <div className="flex items-center border border-gray-200 px-4 py-6 my-2 rounded hover:border-gray-400" >
             <div className="flex flex-col items-center px-4 mr-4 border-r border-gray-100 text-gray-500">
@@ -14,13 +14,13 @@ function PostCard() {
             </div>
             <div className="flex flex-1 items-center justify-between">
                 <div>
-                    <h3 className="text-lg">Filthy frank new song</h3>
+                    <h3 className="text-lg">{title}</h3>
                     <div className="my-2 flex items-center">
                         <img
-                            src="https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.5&w=400&h=400&q=80"
+                            src={user.display_picture}
                             className="rounded-full w-6 h-6 mr-2"
                         />
-                        <span className="text-orange-500">Julia Vega</span>
+                        <span className="text-orange-500">{user.username}</span>
                         <time className="text-gray-400 ml-4">1 days ago.</time>
                     </div>
                 </div>

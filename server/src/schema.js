@@ -12,16 +12,27 @@ const typeDefs = gql`
 	type Post {
 		_id: String!
 		title: String!
+		link: String!
 		description: String
 		subreddit: String!
 		op: User
 		votes: Int!
 	}
 
+	input NewPostInput {
+		title: String!
+		link: String!
+		subreddit: String!
+		description: String	
+	}
 
 	type Query {
 		user: User!
 		posts: [Post]
+	}
+
+	type Mutation {
+		addPost(input: NewPostInput!): Post!
 	}
 
 

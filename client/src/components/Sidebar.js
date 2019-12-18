@@ -12,7 +12,7 @@ const Subreddit = ({ name, image }) => (
     </div>
 )
 
-const SUBREDDITS_QUERY = gql`
+export const SUBREDDITS_QUERY = gql`
     {
         subreddits {
             _id

@@ -30,8 +30,7 @@ module.exports = {
 			let result = await createPost(db, {
 				...input
 			});
-			//console.log(input);
-			console.log(result.ops[0]);
+			return result.ops[0];
 		}
 	},
 

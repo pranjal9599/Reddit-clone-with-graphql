@@ -17,12 +17,21 @@ const typeDefs = gql`
 		subreddit: String!
 		op: User
 		votes: Int!
+		comments: [Comment]
+		commentCount: Int!
 	}
 
 	type SubReddit {
 		_id: String!
 		name: String!
 		image: String
+	}
+
+	type Comment {
+		_id: String!
+		comment: String!
+		user: User
+		votes: Int!
 	}
 
 	input NewPostInput {
@@ -32,10 +41,12 @@ const typeDefs = gql`
 		description: String	
 	}
 
+
 	type Query {
 		user: User!
 		posts: [Post]
 		subreddits: [SubReddit]!
+		post(id: String!): Post
 	}
 
 	type Mutation {

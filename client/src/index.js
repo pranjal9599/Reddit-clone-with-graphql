@@ -4,6 +4,7 @@ import Main from './pages/Main';
 import Post from './pages/Post';
 import ApolloClient, { InMemoryCache } from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { Router } from '@reach/router';
 
 const client = new ApolloClient({
 	uri: 'http://localhost:4000',
@@ -14,7 +15,10 @@ export default client;
 
 const App = () => (
 	<ApolloProvider client={client}>
-		<Main />
+		<Router>
+			<Main path="/" />
+			<Post path="/:id" />
+		</Router>
 	</ApolloProvider>
 );
 
